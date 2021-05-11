@@ -1,0 +1,120 @@
+<!DOCTYPE html> <!--html OBRIGATÓRIO-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--preparar para mobili-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--ICON do Home Page-->
+	<title>Caractere Invisível</title> <!--título que vai na barra do navegador-->
+	<frame src="links.htm" scrolling=no> <!--para NÃO rolar a barra lateral-->
+
+<style>
+
+		body, html {
+			background: hsla(261, 44%, 43%, 1);
+			background: linear-gradient (90deg, hsla(261, 44%, 43%, 1) 0%, hsla(305, 21%, 55%, 1) 53%, hsla(0, 54%, 77%, 1) 100%);
+			filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5F3D9D", endColorstr="#A574A1", GradientType=1 ); /**link:https://coolors.co/gradient-maker/5f3d9d-a574a1-e4a4a4?position=0,53,100&opacity=100,100,100&type=linear&rotation=90*/
+			margin: 0;
+			padding: 0;
+			}
+
+		.main { /**corpo da página*/
+			max-width: 600px; /**reponsive*/
+			max-height: 900px; /**reponsive*/
+			height: 260px; /**tamanho*/
+			margin: 0 auto; 
+			overflow: hidden; /**barrar o scroll*/
+			background:#fafafa;
+			transform:translateY(100px); /**altura de Y do cabeçalho em sentido pra baixo*/
+			text-align: center;
+			border-radius: 50px; /**arrendodamento*/
+			}
+
+		h1{ /**título "caractere invisivel com um clique"*/
+			color: #615F80;
+			font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+			}
+
+		a { /**título cabeçalho*/
+			font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+			color: #fafafa;
+			font-size: 20px;
+			text-decoration: none;
+			}
+
+		div{ /**cabeçalho, página home*/
+			text-align: center;
+			font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+			margin-right:auto;
+			flex-wrap: center;
+			justify-content: center;
+		}
+		
+
+		button{ /**botão e seus estilos; feito em site da web*/
+			font:bold 27px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-style:normal;
+			color:#fafafa;
+			background:#615F80;
+			border:0px solid #ffffff;
+			box-shadow:0px 2px 8px #454545;
+			-moz-box-shadow:0px 2px 8px #454545;
+			-webkit-box-shadow:0px 2px 8px #454545;
+			border-radius:48px 15px 73px 26px;
+			-moz-border-radius:48px 15px 73px 26px;
+			-webkit-border-radius:48px 15px 73px 26px;
+			width:200px;
+			padding:20px 55px;
+			cursor:pointer;
+			margin:0 auto;
+			}
+		button:active{ /**efeito de afundar botão*/
+			cursor:pointer;
+			position:relative;
+			top:2px;
+			} /** abre o estilo CSS*/
+
+</style>
+</head> <!-- FIM DA PARTE 'OCULTA' DO HTML!!-->
+<header>
+			<div class:="container">
+				<a href="https://sites.google.com/view/hfuracoesempreendedores/in%C3%ADcio"><i class="fa fa-home">Voltar para <b>Home Page</b></i></a>
+			</div> <!-- icon -->	
+</header> <!-- FIM DO CABEÇALHO-->
+<body>
+	<script>
+		let copiar = () => {
+            //O texto que será copiado
+            const texto = "ㅤㅤㅤㅤㅤ";
+            //Cria um elemento input (pode ser um textarea)
+            let inputTest = document.createElement("input");
+            inputTest.value = texto;
+            //Anexa o elemento ao body
+            document.body.appendChild(inputTest);
+            //seleciona todo o texto do elemento
+            inputTest.select();
+            //executa o comando copy
+            //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+            document.execCommand('copy');
+            //remove o elemento
+            document.body.removeChild(inputTest);
+        };
+	</script>
+
+		<div class="main"> <!--o retangulo central-->
+		<div class="title"> <!--o titulo dentro do retangulo-->
+			<h1>
+				Caractere invisível com um clique!
+			</h1>
+		</div> <!-- title -->
+		<br> <!--espaço entre os elementos-->
+		<div> <!--o botão CTA-->
+			<button onclick="copiar()" type="button" class="btn btn-sm btn-outline-success" aria-expanded="false" aria-label="Toggle navigation"> <!--copiado da internet-->
+				Copiar <!--o call to action-->
+			</button>
+		<br> <!--espaço entre os elementos-->
+		<br>
+		<p id="paragrafo"> ✔ Copie e cole no seu instagram para organizar as hashtags!</p>
+		</div> <!-- fim do CTA -->
+		</div> <!-- main-->	
+</body> <!-- FIM DO CORPO DO HTML-->
+</html>
